@@ -1,12 +1,12 @@
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: bootcamp-demo
+  name: sampleapp
   labels:
-    release: bootcamp-demo
+    release: sampleapp
 spec:
   selector:
     matchLabels:
-      app: bootcamp-demo
+      app: sampleapp
   endpoints:
   - port: metrics

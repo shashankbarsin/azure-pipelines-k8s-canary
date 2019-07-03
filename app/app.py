@@ -5,7 +5,7 @@ from flask import Flask
 from prometheus_client import start_http_server, Counter
 import os
 
-app = Flask('bootcamp-demo')
+app = Flask('sampleapp')
 c = Counter('requests', 'Number of requests served, by custom_status', ['custom_status'])
 
 @app.route('/')

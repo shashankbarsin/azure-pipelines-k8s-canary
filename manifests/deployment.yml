@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bootcamp-demo
+  name: sampleapp
   labels:
-    app: bootcamp-demo
+    app: sampleapp
 spec:
   replicas: 4
   selector:
     matchLabels:
-      app: bootcamp-demo
+      app: sampleapp
   template:
     metadata:
       annotations:
         prometheus.io/scrape: "true"
       labels:
-        app: bootcamp-demo
+        app: sampleapp
     spec:
       containers:
-      - name: bootcamp-demo
-        image: shashankbarsin/bootcamp-demo
+      - name: sampleapp
+        image: shashankbarsin/azure-pipelines-k8s-canarydemo
         imagePullPolicy: Always
         ports:
         - containerPort: 8000
